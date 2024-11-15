@@ -1,0 +1,237 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #7e654d; /* Cor marrom */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Seção de Apresentação */
+#home {
+    background: url(high-angle-female-clinician-doing-eyebrow-treatment-female-customer.jpg) no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#home h1 {
+    font-size: 3em;
+}
+
+#home p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+#home .btn {
+    background-color: #f5ebe0;
+    color: #4a3f35;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#home .btn:hover {
+    background-color: #4a3f35;
+    color: #fff;
+}
+
+/* Seção Sobre */
+#sobre {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sobre h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4a3f35;
+}
+
+#sobre p {
+    font-size: 1.2em;
+    color: #6d4c41;
+    margin-bottom: 15px;
+}
+
+/* Seção de Serviços */
+#servicos {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#servicos h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #4a3f35;
+}
+
+/* Container para os serviços em formato de grade */
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta dinamicamente */
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Limita a largura máxima */
+}
+
+/* Estilo dos itens de serviço */
+.servico {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.servico:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+}
+
+.servico h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #4a3f35;
+}
+
+.servico p {
+    font-size: 1em;
+    color: #6d4c41;
+}
+
+/* Seção de Contato */
+#contato {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5ebe0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos se ajustem */
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+.contato-conteudo p {
+    font-size: 1.5em;
+    color: #4a3f35;
+    max-width: 400px; /* Limita a largura para não ficar muito esticado */
+}
+
+.contato-conteudo a {
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.contato-conteudo a:hover {
+    background-color: #128c7e;
+}
+
+.endereco {
+    font-size: 1.2em;
+}
+
+.endereco h3 {
+    font-size: 1.5em;
+    color: #4a3f35;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #7e654d;
+    color: #fff;
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5em;
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    header nav ul li a {
+        font-size: 1em;
+    }
+
+    .servicos-container {
+        grid-template-columns: 1fr; /* Serviços em uma coluna */
+    }
+
+    #contato {
+        flex-direction: column; /* Empilha os itens no contato */
+        text-align: center;
+    }
+
+    .contato-conteudo p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 2em;
+    }
+
+    .servico h3 {
+        font-size: 1.2em;
+    }
+
+    .contato-conteudo a {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
